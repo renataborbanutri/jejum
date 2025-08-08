@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>JAFE – Jejum Acelerador Feminino | Transforme seu corpo em 21 dias</title>
+  <meta name="description" content="Transforme seu corpo em 21 dias com o poder do Jejum Intermitente para resultados definitivos. Aprenda o método e use nossa calculadora inteligente." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="JAFE – Transforme seu corpo em 21 dias" />
+  <meta property="og:description" content="Curso de jejum intermitente + calculadora inteligente. Resultados definitivos e seguros em 21 dias." />
+  <meta property="og:image" content="res8.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance -->
+  <link rel="preload" as="image" href="res8.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Facebook Pixel (fornecido) -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '595481199331116');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img alt="fb pixel" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=595481199331116&ev=PageView&noscript=1" />
+  </noscript>
+
+  <style>
+    :root{
+      --main-color:#bd3737; /* principal */
+      --secondary-color:#dea37a; /* secundária */
+      --text-color:#333333; /* texto */
+      --bg-color:#FFFFFF; /* fundo */
+      --btn-color:#cc4e01; /* CTA */
+      --btn-hover:#a74001;
+      --section-pad:60px 20px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg-color); color:var(--text-color); line-height:1.6}
+    img{max-width:100%; height:auto; display:block}
+    a{color:inherit}
+    .container{max-width:1100px; margin-inline:auto; padding-inline:20px}
+    h1,h2,h3,h4{font-family:'Playfair Display',serif; color:var(--main-color); font-weight:700}
+    h1{font-size:2.6rem}
+    h2{font-size:2.1rem; text-align:center; margin:0 0 40px}
+    p{margin-bottom:18px}
+
+    /* Acessibilidade */
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{left:12px;top:12px;width:auto;height:auto;background:#000;color:#fff;padding:10px;border-radius:8px;z-index:999}
+    :focus-visible{outline:3px solid var(--secondary-color); outline-offset:3px}
+    @media (prefers-reduced-motion: reduce){ .cta-button{animation:none!important} html{scroll-behavior:auto} }
+
+    /* CTA */
+    .cta-button{display:inline-block;background:var(--btn-color);color:#fff;padding:16px 28px;font-size:1.06rem;font-weight:800;text-decoration:none;border-radius:10px;text-align:center;transition:transform .12s ease, background .2s ease; box-shadow:0 8px 22px rgba(204,78,1,.22); animation:pulse 2.2s infinite}
+    .cta-button:hover{background:var(--btn-hover); transform:translateY(-1px); animation:none}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.03)}100%{transform:scale(1)}}
+
+    /* HERO */
+    header.hero{background:url('res8.jpg') center/cover no-repeat; color:#fff; padding:110px 20px; text-align:center; position:relative}
+    header.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55)}
+    header.hero .container{position:relative; z-index:1}
+    header.hero h1{color:#fff; text-shadow:0 6px 28px rgba(0,0,0,.42); margin-bottom:16px}
+    header.hero .sub{font-size:1.18rem; max-width:780px; margin:0 auto 28px; color:#fff}
+
+    /* PROBLEMA */
+    section#problema{padding:var(--section-pad); background:#fdf6f0}
+    .problemas-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; text-align:center}
+    .problema-item{background:#fff; padding:24px; border-radius:12px; border-left:6px solid var(--secondary-color); box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .problema-item svg{width:46px;height:46px;margin:0 auto 10px; color:var(--main-color)}
+
+    /* SOLUÇÃO */
+    section#solucao{padding:var(--section-pad)}
+    .solucao-grid{display:flex; align-items:center; gap:44px; flex-wrap:wrap}
+    .solucao-grid .col-text{flex:1 1 360px}
+    .solucao-grid .col-img{flex:1 1 360px; text-align:center}
+    .solucao-grid .col-img img{border-radius:12px; box-shadow:0 12px 28px rgba(0,0,0,.08)}
+    .beneficios-list{list-style:none}
+    .beneficios-list li{display:flex; align-items:center; gap:12px; margin-bottom:12px}
+    .beneficios-list svg{width:22px;height:22px;color:var(--main-color);flex-shrink:0}
+
+    /* PROVA SOCIAL */
+    /* TATA highlight */
+    .tata-highlight{background:#fff;border:2px solid var(--secondary-color);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin-bottom:24px}
+    .tata-highlight .badge{display:inline-block;background:linear-gradient(180deg,#fff,#fff4ec);border:1px solid #ffd9bd;color:#8a3b00;font-weight:800;padding:6px 10px;border-radius:999px;margin-bottom:8px}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:start}
+    .mini-steps{list-style:none;margin-top:8px}
+    .mini-steps li{display:flex;gap:10px;margin-bottom:8px}
+    .mini-steps svg{width:18px;height:18px;color:var(--main-color);flex:0 0 auto}
+    .tata-highlight .video-destaque{border-color:var(--main-color);box-shadow:0 12px 30px rgba(189,55,55,.18)}
+    .tata-highlight .depoimento-texto h4{margin:0 0 6px}
+    @media (max-width:768px){ .feature-grid{display:flex;flex-direction:column} .feature-grid .video-destaque{order:-1} }
+    section#prova-social{padding:var(--section-pad); background:#fdf6f0}
+    .depoimentos-destaque-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:26px; margin-bottom:40px}
+    .depoimento-card{background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.08); overflow:hidden; display:flex; flex-direction:column; border:2px solid transparent}
+    .depoimento-card.video-destaque{border-color:var(--main-color)}
+    .depoimento-texto{padding:18px}
+    .depoimento-texto h4{font-size:1.35rem; margin-bottom:6px; color:var(--text-color)}
+    .video-container{position:relative; padding-bottom:56.25%; height:0; background:#000}
+    .video-container iframe{position:absolute; inset:0; width:100%; height:100%}
+
+    .depoimentos-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+    .depoimentos-grid img{width:100%; border-radius:10px; border:1px solid #eee}
+
+    /* OFERTA */
+    section#oferta{padding:var(--section-pad);}
+    .oferta-box{background:#fff; border:2px solid var(--main-color); border-radius:16px; padding:34px; text-align:center; max-width:860px; margin:0 auto; box-shadow:0 14px 36px rgba(189,55,55,.18)}
+    .preco-principal{font-size:3.2rem; font-weight:900; color:var(--main-color); margin:8px 0 4px}
+    .preco-parcelado{font-size:1.3rem; font-weight:800; margin-bottom:22px}
+    .bonus-section{margin-top:30px; text-align:left; border-top:1px solid #eee; padding-top:20px}
+    .bonus-section h3{text-align:center; margin-bottom:12px}
+    .bonus-item{display:flex; align-items:center; gap:16px; background:#fafafa; padding:14px; border-radius:10px; margin-bottom:12px; border-left:5px solid var(--secondary-color)}
+    .bonus-item img{width:96px; height:96px; object-fit:cover; border-radius:8px}
+    .bonus-info .valor{text-decoration:line-through; font-weight:700}
+
+    /* GARANTIA */
+    section#garantia{padding:var(--section-pad); background:#fdf6f0}
+    .garantia-box{display:flex; align-items:center; gap:30px; background:#fff; padding:28px; border-radius:12px}
+    .garantia-img svg{width:120px; height:120px; color:var(--main-color)}
+
+    /* FAQ */
+    section#faq{padding:var(--section-pad)}
+    .faq-item{border-bottom:1px solid #e6e6e6; margin-bottom:10px}
+    .faq-question{padding:14px; font-weight:800; cursor:pointer; display:flex; justify-content:space-between; align-items:center}
+    .faq-question::after{content:"+"; font-size:1.4rem; color:var(--main-color); transition:transform .2s ease}
+    .faq-answer{max-height:0; overflow:hidden; padding:0 14px; transition:max-height .35s ease, padding .35s ease}
+    .faq-answer p{margin-top:12px}
+    .faq-item.active .faq-answer{max-height:680px; padding:14px}
+    .faq-item.active .faq-question::after{transform:rotate(45deg)}
+
+    /* Footer */
+    footer{background:var(--text-color); color:#fff; text-align:center; padding:34px 20px}
+    .social-links a{color:#fff; text-decoration:none; margin:0 12px; font-size:1.4rem}
+    footer p{margin-top:12px; font-size:.92rem; color:#ddd}
+
+    /* Sticky CTA (mobile) */
+    .sticky-cta{position:fixed; inset:auto 0 0 0; background:#fff; border-top:1px solid #eee; padding:10px; display:flex; gap:10px; align-items:center; justify-content:space-between; z-index:40}
+    .sticky-cta .cta-button{flex:1}
+    @media (min-width:980px){ .sticky-cta{display:none} }
+
+    /* Responsivo */
+    @media (max-width:992px){ .depoimentos-destaque-grid{grid-template-columns:1fr} }
+    @media (max-width:768px){
+      h1{font-size:2.25rem} h2{font-size:1.8rem}
+      header.hero{padding:90px 20px}
+      .solucao-grid,.garantia-box{flex-direction:column; text-align:center}
+      .bonus-item{flex-direction:column; text-align:center}
+    }
+  </style>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"O jejum intermitente é seguro para todos?","acceptedAnswer":{"@type":"Answer","text":"O jejum intermitente é seguro para a maioria das pessoas quando feito corretamente, mas não é indicado para grávidas, insulinodependentes com diabetes tipo 1, lactantes ou crianças. No curso, você recebe orientação para adaptar o método ao seu estilo de vida."}},
+      {"@type":"Question","name":"Como funciona a calculadora inteligente de refeições?","acceptedAnswer":{"@type":"Answer","text":"A calculadora cria planos personalizados com base na sua idade, sexo, nível de atividade e nos alimentos que você tem em casa, incluindo vegetais do tipo A e salada crua à vontade."}},
+      {"@type":"Question","name":"Quais resultados posso esperar em 21 dias?","acceptedAnswer":{"@type":"Answer","text":"Em 21 dias, você pode esperar perda de peso visível, mais energia e clareza sobre como manter os resultados a longo prazo. O curso não inclui consultas médicas, suplementos ou equipamentos."}}
+    ]
+  }
+  </script>
+
+  <!-- Product/Offer Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":"JAFE – Jejum Acelerador Feminino",
+    "brand":"JAFE",
+    "description":"Curso de 21 dias de jejum intermitente + calculadora inteligente de refeições.",
+    "image":"res8.jpg",
+    "offers":{
+      "@type":"Offer",
+      "url":"https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499",
+      "price":"297.00",
+      "priceCurrency":"BRL",
+      "availability":"https://schema.org/InStock"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="hero" id="home" role="banner" aria-label="Seção principal">
+    <div class="container">
+      <h1>Transforme Seu Corpo em 21 Dias: O Poder do Jejum Intermitente para Resultados Definitivos</h1>
+      <p class="sub">Aprenda o método e use a <strong>calculadora inteligente</strong> para refeições personalizadas.</p>
+      <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499" target="_blank" rel="noopener" aria-label="Inscreva-se agora no JAFE">Inscreva-se Agora</a>
+    </div>
+  </header>
+
+  <main id="conteudo" role="main">
+    <!-- PROBLEMA -->
+    <section id="problema" aria-labelledby="prob-title">
+      <div class="container">
+        <h2 id="prob-title">Cansada de Dietas que Não Funcionam?</h2>
+        <div class="problemas-grid">
+          <div class="problema-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992M2.985 19.644v-4.992m0 0h4.992M2.984 14.652l3.181 3.183a8.25 8.25 0 001.44 1.172 8.25 8.25 0 0010.227-1.172l3.181-3.183M7.013 9.348V5.25A3.375 3.375 0 0110.388 1.875h3.375A3.375 3.375 0 0117.138 5.25v3.192"/></svg>
+            <h3>Efeito Sanfona</h3>
+            <p>Você tenta dietas, mas o peso sempre volta, trazendo frustração e desânimo.</p>
+          </div>
+          <div class="problema-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <h3>Falta de Tempo</h3>
+            <p>A rotina corrida impede de planejar refeições saudáveis com os ingredientes que você tem em casa.</p>
+          </div>
+          <div class="problema-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/></svg>
+            <h3>Confusão e Insegurança</h3>
+            <p>Você não sabe como começar o jejum de forma correta e segura – e tem medo de prejudicar sua saúde.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÃO -->
+    <section id="solucao" aria-labelledby="sol-title">
+      <div class="container">
+        <div class="solucao-grid">
+          <div class="col-text">
+            <h2 id="sol-title" style="text-align:left">Curso de Jejum + Calculadora Inteligente</h2>
+            <p>Apresento o <strong>Jejum Acelerador Feminino (JAFE)</strong>, um curso completo de 21 dias que ensina o passo a passo do jejum intermitente da maneira correta. Você ainda recebe uma <strong>calculadora inteligente exclusiva</strong> para planejar refeições personalizadas usando o que você tem em casa.</p>
+            <ul class="beneficios-list" role="list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Emagreça rápido e saudável em apenas 21 dias.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Domine o jejum intermitente com segurança e facilidade.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Refeições práticas com seus ingredientes.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Adeus ao efeito sanfona para sempre.</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Mais energia e bem‑estar no dia a dia.</li>
+            </ul>
+            <div style="margin-top:20px; text-align:center">
+              <img src="resn6.jpeg" alt="Foto da criadora do curso" width="150" height="150" style="width:150px;height:150px;border-radius:50%;border:4px solid var(--secondary-color)" loading="lazy" />
+              <p style="font-weight:700; margin-top:10px">Seu Nome, Nutricionista</p>
+            </div>
+          </div>
+          <div class="col-img">
+            <img src="https://via.placeholder.com/500x550/cccccc/333333?text=Imagem+do+Curso" alt="Visualização do curso JAFE em tablet e celular" width="500" height="550" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL --><div class="tata-highlight" role="region" aria-label="Acompanhamento TATA">
+          <span class="badge">Bônus incluso</span>
+          <h2 style="text-align:left;color:var(--text-color);margin:4px 0 10px">TATA — Transformação Acelerada Totalmente Acompanhada</h2>
+          <div class="feature-grid"><p><strong>TATA é a calculadora inteligente</strong> que <b>calcula todos os seus pratos</b> — é a Nutri com você o tempo todo.</p>
+                <ul class="mini-steps">
+                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>Informa a <strong>quantidade certa</strong> de cada alimento.</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>Entrega a <strong>combinação otimizada</strong> para atender suas necessidades nutricionais.</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg><strong>Em qualquer hora e lugar</strong> — no celular, tablet ou computador.</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg><strong>Para toda a família</strong> — use para você e para quem mora com você.</li>
+                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg><strong>Exclusiva</strong>, desenvolvida pela Nutri.</li>
+                </ul>
+                <p style="margin-top:10px">Conheça a TATA e veja na prática.</p>
+                </article>
+
+              <div class="depoimento-texto"><span class="badge">Assista ao demonstrativo</span></div>
+              <div class="video-container" aria-label="Vídeo demonstrativo da TATA">
+                <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/dTpvitIMeiM" title="Vídeo demonstrativo da TATA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="depoimento-texto">
+                <strong>Vídeo demonstrativo</strong>
+                <p>Assista como a <b>TATA</b> acelera sua transformação.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <h2 id="social-title">Elas Transformaram Suas Vidas. Você é a Próxima!</h2>
+
+        <div class="depoimentos-destaque-grid" role="region" aria-label="Depoimentos em vídeo">
+          <article class="depoimento-card video-destaque">
+            <div class="video-container" aria-label="Depoimento da Tati – perdeu 10kg de gordura">
+              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/KHufW8PRF0c" title="Depoimento da Tati" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="depoimento-texto">
+              <h4>Tati</h4>
+              <p>Perdeu <strong>10kg de gordura</strong> com o JAFE!</p>
+            </div>
+          </article>
+          <article class="depoimento-card video-destaque">
+            <div class="video-container" aria-label="Depoimento da Kenia – perdeu 6kg de gordura">
+              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/8VQA4e2Im7Y" title="Depoimento da Kenia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="depoimento-texto">
+              <h4>Kenia</h4>
+              <p>Perdeu <strong>6kg de gordura</strong> com o JAFE!</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 style="text-align:center; font-size:1.2rem; margin:26px 0 18px; color:var(--text-color)">Mais Histórias de Sucesso</h3>
+        <!-- Galeria: imagens image1.jpg até image25.jpg (fallback automático para .jpeg) --><img src="image1.jpg" onerror="this.onerror=null;this.src='image1.jpeg';" alt="Depoimento 1" loading="lazy" />
+          <img src="image2.jpg" onerror="this.onerror=null;this.src='image2.jpeg';" alt="Depoimento 2" loading="lazy" />
+          <img src="image3.jpg" onerror="this.onerror=null;this.src='image3.jpeg';" alt="Depoimento 3" loading="lazy" />
+          <img src="image4.jpg" onerror="this.onerror=null;this.src='image4.jpeg';" alt="Depoimento 4" loading="lazy" />
+          <img src="image5.jpg" onerror="this.onerror=null;this.src='image5.jpeg';" alt="Depoimento 5" loading="lazy" />
+          <img src="image6.jpg" onerror="this.onerror=null;this.src='image6.jpeg';" alt="Depoimento 6" loading="lazy" />
+          <img src="image7.jpg" onerror="this.onerror=null;this.src='image7.jpeg';" alt="Depoimento 7" loading="lazy" />
+          <img src="image8.jpg" onerror="this.onerror=null;this.src='image8.jpeg';" alt="Depoimento 8" loading="lazy" />
+          <img src="image9.jpg" onerror="this.onerror=null;this.src='image9.jpeg';" alt="Depoimento 9" loading="lazy" />
+          <img src="image10.jpg" onerror="this.onerror=null;this.src='image10.jpeg';" alt="Depoimento 10" loading="lazy" />
+          <img src="image11.jpg" onerror="this.onerror=null;this.src='image11.jpeg';" alt="Depoimento 11" loading="lazy" />
+          <img src="image12.jpg" onerror="this.onerror=null;this.src='image12.jpeg';" alt="Depoimento 12" loading="lazy" />
+          <img src="image13.jpg" onerror="this.onerror=null;this.src='image13.jpeg';" alt="Depoimento 13" loading="lazy" />
+          <img src="image14.jpg" onerror="this.onerror=null;this.src='image14.jpeg';" alt="Depoimento 14" loading="lazy" />
+          <img src="image15.jpg" onerror="this.onerror=null;this.src='image15.jpeg';" alt="Depoimento 15" loading="lazy" />
+          <img src="image16.jpg" onerror="this.onerror=null;this.src='image16.jpeg';" alt="Depoimento 16" loading="lazy" />
+          <img src="image17.jpg" onerror="this.onerror=null;this.src='image17.jpeg';" alt="Depoimento 17" loading="lazy" />
+          <img src="image18.jpg" onerror="this.onerror=null;this.src='image18.jpeg';" alt="Depoimento 18" loading="lazy" />
+          <img src="image19.jpg" onerror="this.onerror=null;this.src='image19.jpeg';" alt="Depoimento 19" loading="lazy" />
+          <img src="image20.jpg" onerror="this.onerror=null;this.src='image20.jpeg';" alt="Depoimento 20" loading="lazy" />
+          <img src="image21.jpg" onerror="this.onerror=null;this.src='image21.jpeg';" alt="Depoimento 21" loading="lazy" />
+          <img src="image22.jpg" onerror="this.onerror=null;this.src='image22.jpeg';" alt="Depoimento 22" loading="lazy" />
+          <img src="image23.jpg" onerror="this.onerror=null;this.src='image23.jpeg';" alt="Depoimento 23" loading="lazy" />
+          <img src="image24.jpg" onerror="this.onerror=null;this.src='image24.jpeg';" alt="Depoimento 24" loading="lazy" />
+          <img src="image25.jpg" onerror="this.onerror=null;this.src='image25.jpeg';" alt="Depoimento 25" loading="lazy" /></div>
+    </section>
+
+    <!-- OFERTA -->
+    <section id="oferta" aria-labelledby="offer-title">
+      <div class="container">
+        <div class="oferta-box">
+          <h2 id="offer-title">Sua Transformação Começa Agora!</h2>
+          <p>Tenha acesso vitalício ao curso completo e a todos os bônus exclusivos por um preço especial de lançamento.</p>
+          <p style="text-decoration:line-through">De R$ 1.094 por apenas:</p>
+          <div class="preco-principal">R$ 297,00</div>
+          <div class="preco-parcelado">ou 12x de R$ 24,75 sem juros</div>
+          <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499" target="_blank" rel="noopener" aria-label="Quero meu acesso imediato">QUERO MEU ACESSO IMEDIATO!</a>
+
+          <div class="bonus-section">
+            <h3>Você ainda recebe 2 Bônus Incríveis</h3>
+            <div class="bonus-item">
+              <img src="https://via.placeholder.com/150x150/cccccc/333333?text=B%C3%B4nus+TATA" alt="Bônus TATA" loading="lazy" />
+              <div class="bonus-info">
+                <p><strong>Bônus 1: TATA (Transformação Acelerada Totalmente Acompanhada)</strong></p>
+                <p>Acompanhamento especial para garantir que você atinja seus objetivos.</p>
+                <p class="valor">Valor: R$ 997,00</p>
+                <p style="color:var(--main-color); font-weight:800">Hoje: Grátis!</p>
+              </div>
+            </div>
+            <div class="bonus-item">
+              <img src="https://via.placeholder.com/150x150/cccccc/333333?text=B%C3%B4nus+Tracker" alt="Bônus Tracker do Jejum" loading="lazy" />
+              <div class="bonus-info">
+                <p><strong>Bônus 2: Tracker do Jejum</strong></p>
+                <p>Ferramenta para acompanhar o progresso e manter a motivação.</p>
+                <p class="valor">Valor: R$ 97,00</p>
+                <p style="color:var(--main-color); font-weight:800">Hoje: Grátis!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GARANTIA -->
+    <section id="garantia" aria-labelledby="garantia-title">
+      <div class="container">
+        <div class="garantia-box">
+          <div class="garantia-img" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="garantia-text">
+            <h3 id="garantia-title" style="color:var(--text-color)">Garantia Incondicional de 21 Dias!</h3>
+            <p style="color:var(--text-color)">Eu acredito tanto no seu resultado que ofereço <strong>21 dias de garantia</strong>. Se por qualquer motivo você não amar o curso ou não ver os resultados esperados, basta enviar um e‑mail e eu devolvo 100% do seu investimento. Sem perguntas e sem burocracia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Perguntas Frequentes</h2>
+        <div class="faq-container" role="region" aria-label="Lista de perguntas frequentes">
+          <div class="faq-item">
+            <div class="faq-question">O jejum intermitente é seguro para todos?</div>
+            <div class="faq-answer"><p>O jejum intermitente é seguro para a maioria, mas <strong>não é indicado</strong> para grávidas, insulinodependentes com diabetes tipo 1, lactantes ou crianças. No curso, você recebe orientação para adaptar o método ao seu estilo de vida.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Como funciona a calculadora inteligente de refeições?</div>
+            <div class="faq-answer"><p>A calculadora cria planos personalizados com base na sua idade, sexo, nível de atividade e nos alimentos que você tem em casa, incluindo vegetais do tipo A e salada crua à vontade. É só inserir as informações e ver as quantidades ideais. Assista ao vídeo demonstrativo da nossa calculadora exclusiva!</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Quais resultados posso esperar em 21 dias?</div>
+            <div class="faq-answer"><p>Em 21 dias, espere <strong>perda de peso visível</strong>, mais energia e clareza sobre como manter os resultados a longo prazo. O curso não inclui consultas médicas, suplementos ou equipamentos.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky CTA (mobile) -->
+  <div class="sticky-cta" role="region" aria-label="Ação rápida">
+    <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499" target="_blank" rel="noopener">Inscreva‑se</a>
+    <a class="cta-button" style="background:#25D366" href="https://wa.me/16153304647?text=Meus%20resultados%20de%20risco%20card%C3%ADaco%3A%0A%0ATriglicer%C3%ADdeos%20%2F%20HDL%3A%202.46%20(Risco%20baixo)%0AColesterol%20Total%20%2F%20HDL%3A%206.48%20(Risco%20alto)%0ALDL%20%2F%20HDL%3A%202.46%20(Risco%20m%C3%A9dio)%0A%0AGostaria%20de%20conversar%20sobre%20isso." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WhatsApp</a>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>Precisa de ajuda ou tem alguma dúvida? Fale conosco!</p>
+      <div class="social-links" aria-label="Redes sociais">
+        <a href="https://www.instagram.com/nutricionistanoseua/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919A118.663 118.663 0 0112 2.163zm0 1.625c-3.149 0-3.499.01-4.72.066-2.73.124-3.952 1.348-4.075 4.075-.056 1.22-.066 1.569-.066 4.72s.01 3.499.066 4.72c.123 2.727 1.345 3.952 4.075 4.075 1.22.056 1.57.066 4.72.066 3.149 0 3.499-.01 4.72-.066 2.73-.124 3.952-1.348 4.075-4.075.056-1.22.066-1.569.066-4.72s-.01-3.499-.066-4.72c-.123-2.727-1.345-3.952-4.075-4.075-1.22-.056-1.57-.066-4.72-.066zM12 7.25a4.75 4.75 0 100 9.5 4.75 4.75 0 000-9.5zM18.36 6.118a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"></path></svg>
+        </a>
+        <a href="https://wa.me/16153304647?text=Meus%20resultados%20de%20risco%20card%C3%ADaco%3A%0A%0ATriglicer%C3%ADdeos%20%2F%20HDL%3A%202.46%20(Risco%20baixo)%0AColesterol%20Total%20%2F%20HDL%3A%206.48%20(Risco%20alto)%0ALDL%20%2F%20HDL%3A%202.46%20(Risco%20m%C3%A9dio)%0A%0AGostaria%20de%20conversar%20sobre%20isso." target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.92-9.91zM16.9 15.3c-.28-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.28-.73.92-.9 1.1-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.55.12-.7.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.1-.19.05-.36-.02-.51-.07-.14-.64-1.54-.88-2.1-.24-.56-.48-.48-.64-.49-.16-.01-.35-.01-.54-.01s-.51.07-.78.36c-.27.28-.93.9-1.14 2.2s.22 2.56.25 2.74c.03.19.46 3.01 4.16 5.41 2.3 1.52 3.42 1.63 4.29 1.54.66.07 1.68-.69 1.92-1.36.24-.67.24-1.24.17-1.36-.08-.13-.27-.21-.55-.35z"></path></svg>
+        </a>
+      </div>
+      <p>© <span id="year"></span> Jejum Acelerador Feminino – JAFE. Todos os direitos reservados.</p>
+      <p>Este produto não substitui o parecer médico profissional. Sempre consulte um médico para tratar de assuntos relativos à saúde.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Ano automático
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ acordeão
+    document.addEventListener('DOMContentLoaded', function(){
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const q = item.querySelector('.faq-question');
+        q.addEventListener('click', () => item.classList.toggle('active'));
+      });
+    });
+
+    // Pixel: marcar CTA como Lead
+    const ctas = document.querySelectorAll('a.cta-button');
+    ctas.forEach(btn => btn.addEventListener('click', () => { try { if(window.fbq){ fbq('track','Lead'); } } catch(e){} }));
+  </script>
+</body>
+</html>
