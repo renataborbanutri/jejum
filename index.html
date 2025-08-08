@@ -163,6 +163,10 @@
     .tcard p{margin:4px 0 0;font-size:.92rem;color:#555}
     @media(min-width:768px){.tata-features{grid-template-columns:repeat(2,1fr)}}
     @media(min-width:1100px){.tata-features{grid-template-columns:repeat(3,1fr)}}
+  .feature-grid .video-destaque{display:none}
+    .tata-video-row{margin-top:18px}
+    .tata-video-row .depoimento-card{max-width:860px;margin-inline:auto}
+    @media(min-width:680px){.tata-video-row .depoimento-card{max-width:960px}}
   </style>
 
   <!-- FAQ Schema -->
@@ -262,7 +266,10 @@
     <!-- PROVA SOCIAL --><div class="tata-highlight" role="region" aria-label="Acompanhamento TATA">
           <span class="badge">Bônus incluso</span>
           <h2 style="text-align:left;color:var(--text-color);margin:4px 0 10px">TATA — Transformação Acelerada Totalmente Acompanhada</h2>
-          <div class="feature-grid"><p><strong>TATA é a calculadora inteligente</strong> que <b>calcula todos os seus pratos</b> — é a Nutri com você o tempo todo.</p>
+          <div class="feature-grid">
+            <article class="depoimento-card" style="border:2px solid var(--secondary-color)">
+              <div class="depoimento-texto">
+                <p><strong>TATA é a calculadora inteligente</strong> que <b>calcula todos os seus pratos</b> — é a Nutri com você o tempo todo.</p>
                 <div class="tata-features" role="list">
                   <div class="tcard" role="listitem">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>
@@ -300,18 +307,20 @@
                     </div>
                   </div>
                 </div>
-                <p style="margin-top:10px">Conheça a TATA e veja na prática.</p>
-                </article>
-
+              </div>
+            </article>
+          </div>
+          <div class="tata-video-row">
+            <article class="depoimento-card video-destaque">
               <div class="depoimento-texto"><span class="badge">Assista ao demonstrativo</span></div>
               <div class="video-container" aria-label="Vídeo demonstrativo da TATA">
                 <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/dTpvitIMeiM" title="Vídeo demonstrativo da TATA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
-              <div class="depoimento-texto">
-                <strong>Vídeo demonstrativo</strong>
-                <p>Assista como a <b>TATA</b> acelera sua transformação.</p>
-              </div>
             </article>
+          </div>
+
+
+
           </div>
         </div>
         <h2 id="social-title">Elas Transformaram Suas Vidas. Você é a Próxima!</h2>
