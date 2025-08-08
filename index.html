@@ -156,6 +156,13 @@
       .solucao-grid,.garantia-box{flex-direction:column; text-align:center}
       .bonus-item{flex-direction:column; text-align:center}
     }
+  .tata-features{display:grid;grid-template-columns:1fr;gap:12px;margin-top:8px}
+    .tcard{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #ffe1c7;border-radius:12px;padding:12px 14px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .tcard svg{width:22px;height:22px;color:var(--main-color);flex:0 0 auto;margin-top:2px}
+    .tcard h4{margin:0;font-size:1rem;color:var(--text-color)}
+    .tcard p{margin:4px 0 0;font-size:.92rem;color:#555}
+    @media(min-width:768px){.tata-features{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1100px){.tata-features{grid-template-columns:repeat(3,1fr)}}
   </style>
 
   <!-- FAQ Schema -->
@@ -256,13 +263,43 @@
           <span class="badge">Bônus incluso</span>
           <h2 style="text-align:left;color:var(--text-color);margin:4px 0 10px">TATA — Transformação Acelerada Totalmente Acompanhada</h2>
           <div class="feature-grid"><p><strong>TATA é a calculadora inteligente</strong> que <b>calcula todos os seus pratos</b> — é a Nutri com você o tempo todo.</p>
-                <ul class="mini-steps">
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>Informa a <strong>quantidade certa</strong> de cada alimento.</li>
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>Entrega a <strong>combinação otimizada</strong> para atender suas necessidades nutricionais.</li>
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg><strong>Em qualquer hora e lugar</strong> — no celular, tablet ou computador.</li>
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg><strong>Para toda a família</strong> — use para você e para quem mora com você.</li>
-                  <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg><strong>Exclusiva</strong>, desenvolvida pela Nutri.</li>
-                </ul>
+                <div class="tata-features" role="list">
+                  <div class="tcard" role="listitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>
+                    <div>
+                      <h4>Quantidade certa</h4>
+                      <p>para cada alimento do seu prato.</p>
+                    </div>
+                  </div>
+                  <div class="tcard" role="listitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>
+                    <div>
+                      <h4>Combinação otimizada</h4>
+                      <p>para atender suas necessidades nutricionais.</p>
+                    </div>
+                  </div>
+                  <div class="tcard" role="listitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M12 6v6h4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/></svg>
+                    <div>
+                      <h4>Em qualquer hora e lugar</h4>
+                      <p>no celular, tablet ou computador.</p>
+                    </div>
+                  </div>
+                  <div class="tcard" role="listitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <div>
+                      <h4>Para toda a família</h4>
+                      <p>use para você e para quem mora com você.</p>
+                    </div>
+                  </div>
+                  <div class="tcard" role="listitem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 20l1-5.8L3.5 9.2l5.9-.9L12 3z" stroke="currentColor"/></svg>
+                    <div>
+                      <h4>Exclusiva</h4>
+                      <p>desenvolvida pela Nutri.</p>
+                    </div>
+                  </div>
+                </div>
                 <p style="margin-top:10px">Conheça a TATA e veja na prática.</p>
                 </article>
 
