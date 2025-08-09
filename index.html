@@ -165,6 +165,27 @@
     .tata-video-row{margin-top:18px}
     .tata-video-row .depoimento-card{max-width:860px;margin-inline:auto}
     @media(min-width:680px){.tata-video-row .depoimento-card{max-width:960px}}
+
+
+
+        /* ===== Quem sou eu ===== */
+    section#sobre{padding:var(--section-pad); background:#fff}
+    .about-section{background:#fff;border:2px solid var(--secondary-color);border-radius:16px;padding:24px;box-shadow:0 10px 26px rgba(0,0,0,.06)}
+    .about-section h2{color:var(--text-color);text-align:left;margin:0 0 14px}
+    .about-content{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+    .about-photo{flex:0 0 240px;text-align:center}
+    .about-photo img{width:240px;max-width:100%;height:auto;border-radius:12px;border:4px solid #ffe1c7;box-shadow:0 12px 28px rgba(0,0,0,.08)}
+    .photo-placeholder{display:none;align-items:center;justify-content:center;width:240px;max-width:100%;aspect-ratio:1/1;border-radius:12px;border:2px dashed #ffd9bd;color:#8a3b00;background:#fffaf6;font-weight:800;line-height:1.3}
+    .about-text{flex:1 1 360px;color:#444}
+    .about-text p{margin-bottom:14px}
+    .about-text .final-message{background:#fff6ea;border:1px solid #ffd9bd;border-radius:10px;padding:12px 14px;color:#8a3b00;margin-top:6px}
+    .about-section .cta-wrap{margin-top:14px}
+    .about-section .cta-wrap .cta-button{border-radius:50px}
+    @media (max-width:768px){
+      .about-content{flex-direction:column;align-items:stretch}
+      .about-photo{margin:0 auto}
+    }
+
   </style>
 
   <!-- FAQ Schema -->
@@ -203,170 +224,165 @@
 
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
- <header class="hero" id="home" role="banner" aria-label="Seção principal"
-        style="background: linear-gradient(180deg, #fff3ed 0%, #ffe0d1 100%); padding: 40px 0;">
-  <div class="container">
-    <!-- Badges -->
-    <div class="hero-badges" aria-hidden="true" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px;">
-      <span class="hero-badge" style="background:#ffb27e;color:#fff;padding:6px 14px;border-radius:999px;font-weight:bold;">Para mulheres reais</span>
-      <span class="hero-badge" style="background:#ff8f6b;color:#fff;padding:6px 14px;border-radius:999px;font-weight:bold;">Sem dieta maluca</span>
-      <span class="hero-badge" style="background:#f75e3e;color:#fff;padding:6px 14px;border-radius:999px;font-weight:bold;">Resultados em 21 dias</span>
-    </div>
-
-    <!-- Texto -->
-    <div class="hero-text" style="display:flex;flex-direction:column;gap:12px;max-width:800px;margin:0 auto;text-align:center">
-      <div class="hero-box" style="background:rgba(255,255,255,0.9);padding:18px;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-        <h1 style="color:#8a3b00;font-size:1.9rem;line-height:1.3;font-weight:900;">
-          21 dias para o corpo e a energia que você achou que tinha perdido para sempre
-        </h1>
+  <header class="hero" id="home" role="banner" aria-label="Seção principal"
+          style="background: linear-gradient(180deg, #fff3ed 0%, #ffe0d1 100%); padding: 40px 0;">
+    <div class="container">
+      <!-- Badges -->
+      <div class="hero-badges" aria-hidden="true" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px;">
+        <span class="hero-badge" style="background:#ffb27e;color:#fff;padding:6px 14px;border-radius:999px;font-weight:bold;">Para mulheres reais</span>
+        <span class="hero-badge" style="background:#ff8f6b;color:#fff;padding:6px 14px;border-radius:999px;font-weight:bold;">Sem dieta maluca</span>
+        <span class="hero-badge" style="background:#f75e3e;color:#fff;padding:6px 14px;border-radius:999px;font-weight:bold;">Resultados em 21 dias</span>
       </div>
-      <div class="hero-box" style="background:rgba(255,255,255,0.9);padding:18px;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
-        <p style="color:#5a2d0c;font-size:1.15rem;line-height:1.5;font-weight:600;">
-          O método feminino de jejum intermitente + <strong>calculadora inteligente</strong> que te mostra
-          <em>o que</em> e <em>quanto</em> comer com o que você já tem em casa.
-        </p>
+
+      <!-- Texto -->
+      <div class="hero-text" style="display:flex;flex-direction:column;gap:12px;max-width:800px;margin:0 auto;text-align:center">
+        <div class="hero-box" style="background:rgba(255,255,255,0.9);padding:18px;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+          <h1 style="color:#8a3b00;font-size:1.9rem;line-height:1.3;font-weight:900;">
+            21 dias para o corpo e a energia que você achou que tinha perdido para sempre
+          </h1>
+        </div>
+        <div class="hero-box" style="background:rgba(255,255,255,0.9);padding:18px;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+          <p style="color:#5a2d0c;font-size:1.15rem;line-height:1.5;font-weight:600;">
+            O método feminino de jejum intermitente + <strong>calculadora inteligente</strong> que te mostra
+            <em>o que</em> e <em>quanto</em> comer com o que você já tem em casa.
+          </p>
+        </div>
+      </div>
+
+      <!-- Botão CTA -->
+      <div style="text-align:center;margin-top:20px;">
+        <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499"
+           target="_blank" rel="noopener"
+           style="display:inline-block;background:#ff6b4a;color:#fff;padding:14px 26px;border-radius:50px;
+                  font-size:1.1rem;font-weight:bold;text-decoration:none;box-shadow:0 4px 12px rgba(255,107,74,0.4);
+                  transition:transform 0.2s ease;"
+           onmouseover="this.style.transform='scale(1.05)';"
+           onmouseout="this.style.transform='scale(1)';"
+           aria-label="Garantir minha transformação agora">
+          👉 QUERO MINHA TRANSFORMAÇÃO AGORA
+        </a>
       </div>
     </div>
-
-    <!-- Botão CTA -->
-    <div style="text-align:center;margin-top:20px;">
-      <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499"
-         target="_blank" rel="noopener"
-         style="display:inline-block;background:#ff6b4a;color:#fff;padding:14px 26px;border-radius:50px;
-                font-size:1.1rem;font-weight:bold;text-decoration:none;box-shadow:0 4px 12px rgba(255,107,74,0.4);
-                transition:transform 0.2s ease;"
-         onmouseover="this.style.transform='scale(1.05)';"
-         onmouseout="this.style.transform='scale(1)';"
-         aria-label="Garantir minha transformação agora">
-        👉 QUERO MINHA TRANSFORMAÇÃO AGORA
-      </a>
-    </div>
-  </div>
-</header>
-
+  </header>
 
   <main id="conteudo" role="main">
     <!-- PROBLEMA -->
-   <section id="problema" aria-labelledby="prob-title">
-  <div class="container">
-    <span class="badge" style="display:inline-block;background:linear-gradient(180deg,#fff,#fff4ec);border:1px solid #ffd9bd;color:#8a3b00;font-weight:800;padding:6px 12px;border-radius:999px;margin-bottom:16px">Plano guiado • Sem adivinhação</span>
-    <br>
-    <h2 id="prob-title" style="
-  display: inline-block;
-  background: linear-gradient(180deg, #fff8f3, #ffe7d6);
-  padding: 18px 28px;
-  border-radius: 50px;
-  border: 2px solid #ffb27e;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #8a3b00;
-  box-shadow: 0 4px 10px rgba(255, 178, 126, 0.3);
-  text-align: center;
-">
-  Os 3 Pilares que destravam seu emagrecimento em 21 dias
-</h2>
+    <section id="problema" aria-labelledby="prob-title">
+      <div class="container">
+        <span class="badge" style="display:inline-block;background:linear-gradient(180deg,#fff,#fff4ec);border:1px solid #ffd9bd;color:#8a3b00;font-weight:800;padding:6px 12px;border-radius:999px;margin-bottom:16px">Plano guiado • Sem adivinhação</span>
+        <br>
+        <h2 id="prob-title" style="
+          display: inline-block;
+          background: linear-gradient(180deg, #fff8f3, #ffe7d6);
+          padding: 18px 28px;
+          border-radius: 50px;
+          border: 2px solid #ffb27e;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #8a3b00;
+          box-shadow: 0 4px 10px rgba(255, 178, 126, 0.3);
+          text-align: center;">
+          Os 3 Pilares que destravam seu emagrecimento em 21 dias
+        </h2>
 
-    <div class="problemas-grid">
-  <!-- Pilar 1 -->
-  <div class="problema-item">
-    <!-- Ícone calculadora -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M6 2C4.897 2 4 2.897 4 4v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H6zm0 2h12v4H6V4zm0 6h12v10H6V10zm2 2v2h2v-2H8zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2H8zm4 0v2h2v-2h-2z"/>
-    </svg>
-    <h3>TATA: sua Nutri no bolso</h3>
-    <p>Você terá a <strong>TATA, a calculadora inteligente</strong> — a Nutri com você para montar seus pratos na medida certa. <u>Quantidades exatas</u> e <u>combinações ideais</u> usando o que já tem em casa, sem adivinhação.</p>
-  </div>
+        <div class="problemas-grid">
+          <!-- Pilar 1 -->
+          <div class="problema-item">
+            <!-- Ícone calculadora -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 2C4.897 2 4 2.897 4 4v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2H6zm0 2h12v4H6V4zm0 6h12v10H6V10zm2 2v2h2v-2H8zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2zm-8 4v2h2v-2H8zm4 0v2h2v-2h-2z"/>
+            </svg>
+            <h3>TATA: sua Nutri no bolso</h3>
+            <p>Você terá a <strong>TATA, a calculadora inteligente</strong> — a Nutri com você para montar seus pratos na medida certa. <u>Quantidades exatas</u> e <u>combinações ideais</u> usando o que já tem em casa, sem adivinhação.</p>
+          </div>
 
-  <!-- Pilar 2 -->
-  <div class="problema-item">
-    <!-- Ícone calendário -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
-    </svg>
-    <h3>Tracker 21 Dias (caminho pronto)</h3>
-    <p>Você recebe um <strong>guia diário já validado</strong>, um passo a passo para seu jejum de 21 dias em formato PDF. É só abrir e seguir. Feito para facilitar, até na hora de imprimir.</p>
-  </div>
+          <!-- Pilar 2 -->
+          <div class="problema-item">
+            <!-- Ícone calendário -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z"/>
+            </svg>
+            <h3>Tracker 21 Dias (caminho pronto)</h3>
+            <p>Você recebe um <strong>guia diário já validado</strong>, um passo a passo para seu jejum de 21 dias em formato PDF. É só abrir e seguir. Feito para facilitar, até na hora de imprimir.</p>
+          </div>
 
-  <!-- Pilar 3 -->
-  <div class="problema-item">
-    <!-- Ícone troféu -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M17 3V1h-2v2H9V1H7v2H3v6c0 2.757 2.243 5 5 5a4.978 4.978 0 0 0 3-1.019V17H9v4H7v2h10v-2h-2v-4h-2v-4.019A4.978 4.978 0 0 0 16 14c2.757 0 5-2.243 5-5V3h-4zM5 9V5h2v4a3.003 3.003 0 0 1-2-3zm14 0a3.003 3.003 0 0 1-2 3V5h2v4z"/>
-    </svg>
-    <h3>Comece, veja resultado e mantenha</h3>
-    <p>Em <strong>21 dias</strong> você inicia do jeito certo, vê resultados reais e aprende a <strong>manter para sempre</strong> — com saúde e sem restrições malucas.</p>
-  </div>
-</div>
+          <!-- Pilar 3 -->
+          <div class="problema-item">
+            <!-- Ícone troféu -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17 3V1h-2v2H9V1H7v2H3v6c0 2.757 2.243 5 5 5a4.978 4.978 0 0 0 3-1.019V17H9v4H7v2h10v-2h-2v-4h-2v-4.019A4.978 4.978 0 0 0 16 14c2.757 0 5-2.243 5-5V3h-4zM5 9V5h2v4a3.003 3.003 0 0 1-2-3zm14 0a3.003 3.003 0 0 1-2 3V5h2v4z"/>
+            </svg>
+            <h3>Comece, veja resultado e mantenha</h3>
+            <p>Em <strong>21 dias</strong> você inicia do jeito certo, vê resultados reais e aprende a <strong>manter para sempre</strong> — com saúde e sem restrições malucas.</p>
+          </div>
+        </div>
 
-
-    <div style="text-align:center; margin-top:30px">
-      <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499" target="_blank" rel="noopener" aria-label="Quero garantir meu acesso agora">
-        👉 QUERO DESBLOQUEAR MEU EMAGRECIMENTO AGORA
-      </a>
-    </div>
-  </div>
-</section>
-
-
+        <div style="text-align:center; margin-top:30px">
+          <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499" target="_blank" rel="noopener" aria-label="Quero garantir meu acesso agora">
+            👉 QUERO DESBLOQUEAR MEU EMAGRECIMENTO AGORA
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- SOLUÇÃO -->
     <section id="solucao" aria-labelledby="sol-title">
       <div class="tata-highlight" role="region" aria-label="Apresentação do JAFE">
-  <span class="badge">Método Exclusivo</span>
-  <h2 style="text-align:left;color:var(--text-color);margin:4px 0 10px">
-    JAFE — Jejum feminino + Calculadora de refeições
-  </h2>
-  <div class="depoimento-texto">
-    <p><strong>O Jejum Acelerador Feminino (JAFE)</strong> é um programa de 21 dias criado para mulheres que querem emagrecer de forma eficiente e sustentável – sem dietas malucas e sem passar fome. Você aprende a usar o jejum do jeito certo e ainda conta com uma <strong>calculadora exclusiva</strong> que mostra <u>quantidades exatas</u> e <u>combinações ideais</u> para cada refeição.</p>
-    <div class="tata-features" role="list">
-      <div class="tcard" role="listitem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <div>
-          <h4>Resultados visíveis</h4>
-          <p>em 21 dias – com energia e leveza.</p>
+        <span class="badge">Método Exclusivo</span>
+        <h2 style="text-align:left;color:var(--text-color);margin:4px 0 10px">
+          JAFE — Jejum feminino + Calculadora de refeições
+        </h2>
+        <div class="depoimento-texto">
+          <p><strong>O Jejum Acelerador Feminino (JAFE)</strong> é um programa de 21 dias criado para mulheres que querem emagrecer de forma eficiente e sustentável – sem dietas malucas e sem passar fome. Você aprende a usar o jejum do jeito certo e ainda conta com uma <strong>calculadora exclusiva</strong> que mostra <u>quantidades exatas</u> e <u>combinações ideais</u> para cada refeição.</p>
+          <div class="tata-features" role="list">
+            <div class="tcard" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <h4>Resultados visíveis</h4>
+                <p>Em 21 dias – com energia e leveza.</p>
+              </div>
+            </div>
+            <div class="tcard" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <h4>Jejum simplificado</h4>
+                <p>Seguro e prático, do básico ao avançado.</p>
+              </div>
+            </div>
+            <div class="tcard" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <h4>Refeições personalizadas</h4>
+                <p>Com o que já existe na sua geladeira.</p>
+              </div>
+            </div>
+            <div class="tcard" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <h4>Adeus efeito sanfona</h4>
+                <p>Mantenha o peso sem sofrimento.</p>
+              </div>
+            </div>
+            <div class="tcard" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <div>
+                <h4>Mais disposição</h4>
+                <p>Foco e bem-estar no dia a dia.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="tcard" role="listitem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <div>
-          <h4>Jejum simplificado</h4>
-          <p>seguro e prático, do básico ao avançado.</p>
-        </div>
-      </div>
-      <div class="tcard" role="listitem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <div>
-          <h4>Refeições personalizadas</h4>
-          <p>com o que já existe na sua geladeira.</p>
-        </div>
-      </div>
-      <div class="tcard" role="listitem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <div>
-          <h4>Adeus efeito sanfona</h4>
-          <p>mantenha o peso sem sofrimento.</p>
-        </div>
-      </div>
-      <div class="tcard" role="listitem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <div>
-          <h4>Mais disposição</h4>
-          <p>foco e bem-estar no dia a dia.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     </section>
 
     <!-- PROVA SOCIAL -->
@@ -384,35 +400,35 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>
                     <div>
                       <h4>Quantidade certa</h4>
-                      <p>para cada alimento do seu prato.</p>
+                      <p>Para cada alimento do seu prato.</p>
                     </div>
                   </div>
                   <div class="tcard" role="listitem">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"/></svg>
                     <div>
                       <h4>Combinação otimizada</h4>
-                      <p>para atender suas necessidades nutricionais.</p>
+                      <p>Para atender suas necessidades nutricionais.</p>
                     </div>
                   </div>
                   <div class="tcard" role="listitem">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M12 6v6h4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/></svg>
                     <div>
                       <h4>Em qualquer hora e lugar</h4>
-                      <p>no celular, tablet ou computador.</p>
+                      <p>No celular, tablet ou computador.</p>
                     </div>
                   </div>
                   <div class="tcard" role="listitem">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                     <div>
                       <h4>Para toda a família</h4>
-                      <p>use para você e para quem mora com você.</p>
+                      <p>Use para você e para quem mora com você.</p>
                     </div>
                   </div>
                   <div class="tcard" role="listitem">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.3 5.9.9-4.2 4.1 1 5.8L12 16.9 6.7 20l1-5.8L3.5 9.2l5.9-.9L12 3z" stroke="currentColor"/></svg>
                     <div>
                       <h4>Exclusiva</h4>
-                      <p>desenvolvida pela Nutri.</p>
+                      <p>Desenvolvida pela Nutri.</p>
                     </div>
                   </div>
                 </div>
@@ -421,7 +437,7 @@
           </div>
           <div class="tata-video-row">
             <article class="depoimento-card video-destaque">
-               <div class="depoimento-texto"><span class="badge">Assista como montar sua refeição</span></div>
+              <div class="depoimento-texto"><span class="badge">Assista como montar sua refeição</span></div>
               <div class="video-container" aria-label="Vídeo demonstrativo da TATA">
                 <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/dTpvitIMeiM" title="Vídeo demonstrativo da TATA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
@@ -450,6 +466,16 @@
               <p>Perdeu <strong>6kg de gordura!</strong></p>
             </div>
           </article>
+
+           <article class="depoimento-card video-destaque">
+            <div class="video-container" aria-label="Transformação da Paula">
+              <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/DsHG05kklDA?" title="Transformação da Paula" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="depoimento-texto">
+              <h4>Transformação da Paula</h4>
+            </div>
+          </article>
+
         </div>
 
         <h3 style="text-align:center; font-size:1.2rem; margin:26px 0 18px; color:var(--text-color)">Mais histórias de sucesso</h3>
@@ -477,28 +503,47 @@
           <img src="image21.jpg" onerror="this.onerror=null;this.src='image21.jpeg';" alt="Depoimento 21" loading="lazy" />
           <img src="image22.jpeg" onerror="this.onerror=null;this.src='image22.jpeg';" alt="Depoimento 22" loading="lazy" />
           <img src="image23.jpg" onerror="this.onerror=null;this.src='image23.jpeg';" alt="Depoimento 23" loading="lazy" />
-
-         <img src="image24.jpg" onerror="this.onerror=null;this.src='image24.jpeg';" alt="Depoimento 24" loading="lazy" />
+          <img src="image24.jpg" onerror="this.onerror=null;this.src='image24.jpeg';" alt="Depoimento 24" loading="lazy" />
           <img src="image25.jpg" onerror="this.onerror=null;this.src='image25.jpg';" alt="Depoimento 25" loading="lazy" />
           <img src="image29.jpeg" onerror="this.onerror=null;this.src='image29.jpeg';" alt="Depoimento 25" loading="lazy" />
-
           <img src="image27.jpeg" onerror="this.onerror=null;this.src='image27.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image28.jpeg" onerror="this.onerror=null;this.src='image28.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image30.jpeg" onerror="this.onerror=null;this.src='image30.jpeg';" alt="Depoimento 25" loading="lazy" />
-
           <img src="image26.jpeg" onerror="this.onerror=null;this.src='image26.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image32.jpeg" onerror="this.onerror=null;this.src='image32.jpeg';" alt="Depoimento 25" loading="lazy" />
-
           <img src="image33.jpeg" onerror="this.onerror=null;this.src='image33.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image34.jpeg" onerror="this.onerror=null;this.src='image34.jpeg';" alt="Depoimento 25" loading="lazy" />
-
           <img src="image31.jpeg" onerror="this.onerror=null;this.src='image31.jpeg';" alt="Depoimento 25" loading="lazy" />
-
           <img src="image35.jpeg" onerror="this.onerror=null;this.src='image35.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image36.jpeg" onerror="this.onerror=null;this.src='image36.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image37.jpeg" onerror="this.onerror=null;this.src='image37.jpeg';" alt="Depoimento 25" loading="lazy" />
           <img src="image38.jpeg" onerror="this.onerror=null;this.src='image38.jpeg';" alt="Depoimento 25" loading="lazy" />
         </div>
+      </div>
+    </section>
+
+    <!-- BÔNUS EXTRAS (novo bloco) -->
+    <section class="bonus-extras" style="background:#fff9f6;padding:40px 20px;border-top:4px solid #ffb27e;">
+      <div class="container" style="max-width:900px;margin:auto;text-align:center;">
+        <h2 style="color:#8a3b00;font-size:1.8rem;margin-bottom:20px;">🎁 Bônus Extras do JAFE</h2>
+        <p style="color:#5a2d0c;font-size:1.1rem;margin-bottom:30px;">
+          Além do Método JAFE, você recebe conteúdos exclusivos para acelerar e potencializar seus resultados:
+        </p>
+        <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;text-align:left;">
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;box-shadow:0 4px 8px rgba(0,0,0,0.03);"><span style="font-size:1.3rem;">🥗</span> Como montar suas refeições</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;box-shadow:0 4px 8px rgba(0,0,0,0.03);"><span style="font-size:1.3rem;">🛏</span> Higiene do sono e rotina matinal</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">💆‍♀️</span> A verdade sobre Colágeno</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">🌸</span> Menopausa e pré-menopausa</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">🍷</span> A verdade sobre o álcool</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">💧</span> O poder da água com sal</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">🦋</span> Tireóide</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">🧠</span> Intestino: Seu segundo cérebro</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">🧪</span> Entenda seu exame de sangue</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">💊</span> Entenda os Suplementos</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">📦</span> Entenda os rótulos dos alimentos</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">📖</span> Ebook de receitas práticas</li>
+          <li style="background:#fff;border:1px solid #ffeadf;border-radius:12px;padding:14px;display:flex;align-items:flex-start;gap:10px;"><span style="font-size:1.3rem;">📔</span> Ebook de molhos saudáveis</li>
+        </ul>
       </div>
     </section>
 
@@ -517,7 +562,6 @@
           <div class="bonus-section">
             <h3>Você ainda recebe 2 Bônus Incríveis</h3>
             <div class="bonus-item">
-
               <div class="bonus-info">
                 <p><strong>Bônus 1: TATA (Transformação Acelerada Totalmente Acompanhada)</strong></p>
                 <p>Calculadora inteligente para montar seus pratos com precisão – sem pesar alimentos.</p>
@@ -553,6 +597,54 @@
       </div>
     </section>
 
+
+      <!-- QUEM SOU EU -->
+      <section id="sobre" aria-labelledby="sobre-title">
+        <div class="container">
+          <div class="about-section">
+            <h2 id="sobre-title">✨ Quem sou eu?</h2>
+
+            <div class="about-content">
+              <div class="about-photo">
+                <img
+                  src="eu.png"
+                  alt="Renata Borba - Nutricionista"
+                  loading="lazy"
+                  width="240" height="240"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                <div class="photo-placeholder">
+                  👩‍⚕️ Renata Borba<br/>Nutricionista
+                </div>
+              </div>
+
+              <div class="about-text">
+                <p><strong>Muito prazer, eu me chamo Renata Borba, nutricionista e criadora do +Maravilhosa.</strong></p>
+
+                <p><strong>Eu fui a minha primeira paciente.</strong> Durante anos, vivi uma relação difícil com o meu corpo, a alimentação e a balança. Me sentia cansada, sem energia, com a autoestima abalada... até que decidi mudar.</p>
+
+                <p>Através da nutrição e do controle hormonal, <strong>eliminei 25kg, que nunca mais ganhei de volta!</strong> Recuperei minha saúde e, o mais importante, reencontrei o amor por mim mesma.</p>
+
+                <p>Foi aí que nasceu minha paixão pela nutrição e o desejo de ajudar outras mulheres a passarem pela mesma transformação que eu vivi — <strong>sem dietas restritivas, sem culpa e com resultados duradouros.</strong></p>
+
+                <p>Hoje, acompanho de perto mulheres reais que querem emagrecer, equilibrar seus hormônios e viver com mais leveza, saúde e liberdade.</p>
+
+                <p><strong>Porque sim, é possível emagrecer de forma definitiva comendo de verdade e respeitando seu corpo.</strong></p>
+
+                <p class="final-message"><strong>Seja bem-vinda ao início da sua nova história. Vamos juntas?</strong></p>
+
+                <div class="cta-wrap" style="text-align:left">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
     <!-- FAQ -->
     <section id="faq" aria-labelledby="faq-title">
       <div class="container">
@@ -575,50 +667,35 @@
     </section>
   </main>
 
-  <!-- Sticky CTA (mobile)
-  <div class="sticky-cta" role="region" aria-label="Ação rápida">
-    <a class="cta-button" href="https://pay.hotmart.com/P95013056W?off=rhcg9ns5&bid=1754517110499" target="_blank" rel="noopener">GARANTIR MEU MÉTODO JAFE</a>
-    <a class="cta-button" style="background:#25D366" href="https://wa.me/16153304647?text=Meus%20resultados%20de%20risco%20card%C3%ADaco%3A%0A%0ATriglicer%C3%ADdeos%20%2F%20HDL%3A%202.46%20(Risco%20baixo)%0AColesterol%20Total%20%2F%20HDL%3A%206.48%20(Risco%20alto)%0ALDL%20%2F%20HDL%3A%202.46%20(Risco%20m%C3%A9dio)%0A%0AGostaria%20de%20conversar%20sobre%20isso." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">WhatsApp</a>
-  </div> -->
-
+  <!-- Contato destaque -->
   <section class="contato-destaque" style="background:linear-gradient(180deg,#fff,#fff5f0);padding:30px 20px;text-align:center;">
-  <h2 style="color:#8a3b00;font-size:1.6rem;margin-bottom:12px;">Dúvidas?</h2>
-<!--  <p style="font-size:1.1rem;color:#444;margin-bottom:20px;">
-    Fale diretamente comigo no WhatsApp ou no Instagram e receba respostas rápidas sobre o JAFE.
-  </p> -->
+    <h2 style="color:#8a3b00;font-size:1.6rem;margin-bottom:12px;">Dúvidas?</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+      <!-- Botão WhatsApp -->
+      <a href="https://wa.me/16153304647?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20o%20JAFE%2C%20mas%20antes%20preciso%20tirar%20algumas%20d%C3%BAvidas%20r%C3%A1pidas.%20Pode%20me%20ajudar%20agora%3F"
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:12px 20px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 4px 10px rgba(37, 211, 102, 0.4);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.92-9.91zM16.9 15.3c-.28-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.28-.73.92-.9 1.1-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.55.12-.7.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.1-.19.05-.36-.02-.51-.07-.14-.64-1.54-.88-2.1-.24-.56-.48-.48-.64-.49-.16-.01-.35-.01-.54-.01s-.51.07-.78.36c-.27.28-.93.9-1.14 2.2s.22 2.56.25 2.74c.03.19.46 3.01 4.16 5.41 2.3 1.52 3.42 1.63 4.29 1.54.66.07 1.68-.69 1.92-1.36.24-.67.24-1.24.17-1.36-.08-.13-.27-.21-.55-.35z"></path>
+        </svg>
+        WhatsApp
+      </a>
 
-  <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-    <!-- Botão WhatsApp -->
-    <a href="https://wa.me/16153304647?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20o%20JAFE%2C%20mas%20antes%20preciso%20tirar%20algumas%20d%C3%BAvidas%20r%C3%A1pidas.%20Pode%20me%20ajudar%20agora%3F"
-       target="_blank"
-       rel="noopener"
-       style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:12px 20px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 4px 10px rgba(37, 211, 102, 0.4);">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.92-9.91zM16.9 15.3c-.28-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.28-.73.92-.9 1.1-.16.19-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.39-1.07-.95-1.79-2.12-2-2.48-.21-.36-.02-.55.12-.7.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.1-.19.05-.36-.02-.51-.07-.14-.64-1.54-.88-2.1-.24-.56-.48-.48-.64-.49-.16-.01-.35-.01-.54-.01s-.51.07-.78.36c-.27.28-.93.9-1.14 2.2s.22 2.56.25 2.74c.03.19.46 3.01 4.16 5.41 2.3 1.52 3.42 1.63 4.29 1.54.66.07 1.68-.69 1.92-1.36.24-.67.24-1.24.17-1.36-.08-.13-.27-.21-.55-.35z"></path>
-      </svg>
-      WhatsApp
-    </a>
-
-    <!-- Botão Instagram -->
-    <a href="https://www.instagram.com/nutricionistanoseua"
-       target="_blank"
-       rel="noopener"
-       style="display:inline-flex;align-items:center;gap:8px;background:#E1306C;color:white;padding:12px 20px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 4px 10px rgba(225, 48, 108, 0.4);">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 2c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm4.8-.9c-.4 0-.8.4-.8.8s.4.8.8.8.8-.4.8-.8-.4-.8-.8-.8z"/>
-      </svg>
-      Instagram
-    </a>
-  </div>
-</section>
-
+      <!-- Botão Instagram -->
+      <a href="https://www.instagram.com/nutricionistanoseua"
+         target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:8px;background:#E1306C;color:white;padding:12px 20px;border-radius:50px;font-weight:bold;text-decoration:none;box-shadow:0 4px 10px rgba(225, 48, 108, 0.4);">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 2c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3zm4.8-.9c-.4 0-.8.4-.8.8s.4.8.8.8.8-.4.8-.8-.4-.8-.8-.8z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </section>
 
   <footer role="contentinfo">
     <div class="container">
-
-      </div>
       <p>© <span id="year"></span> Jejum Acelerador Feminino – JAFE. Todos os direitos reservados.</p>
-
     </div>
   </footer>
 
