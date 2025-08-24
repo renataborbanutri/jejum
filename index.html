@@ -18,19 +18,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 
-  <!-- Facebook Pixel (fornecido) -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
-    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '595481199331116');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img alt="fb pixel" height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=595481199331116&ev=PageView&noscript=1" />
-  </noscript>
+<!-- Meta Pixel com eventID para deduplicação -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+/* 1) Seu Pixel ID (mantém o mesmo) */
+fbq('init', '595481199331116');
+
+/* 2) Gera um ID único por carregamento de página
+      - salvamos em window.metaEventId para você (ou o servidor) reutilizar */
+(function(){
+  function uuidv4(){
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){
+      var r=Math.random()*16|0, v=c==='x'?r:(r&0x3|0x8);
+      return v.toString(16);
+    });
+  }
+  window.metaEventId = uuidv4();
+})();
+
+/* 3) Envia PageView com eventID (requisito para deduplicar com a CAPI) */
+fbq('track', 'PageView', {}, { eventID: window.metaEventId });
+</script>
+
+<noscript>
+  <img alt="fb pixel" height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=595481199331116&ev=PageView&noscript=1"/>
+</noscript>
+<!-- /Meta Pixel -->
+
 
   <style>
     :root{
